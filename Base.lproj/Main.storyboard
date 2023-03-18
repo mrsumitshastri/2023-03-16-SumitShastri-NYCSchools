@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="jzL-P1-mr9">
+            <objects>
+                <navigationController storyboardIdentifier="NYCSchoolListingViewController" id="eiT-Tu-A4b" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2B8-i1-Tic">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="88P-sU-36I" kind="relationship" relationship="rootViewController" id="4cC-xC-R20"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TVM-FA-pRQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-770" y="223"/>
+        </scene>
+        <!--School Listing View Controller-->
+        <scene sceneID="uik-lv-CF7">
+            <objects>
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" id="88P-sU-36I" customClass="NYCSchoolListingViewController" customModule="_023_03_16_SumitShastri_NYCSchools" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="tw7-C9-1im">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NYCSchoolListingCell" id="bmt-Fa-bED" customClass="NYCSchoolListingCell" customModule="_023_03_16_SumitShastri_NYCSchools" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bmt-Fa-bED" id="TDB-NH-fo8">
+                                    <rect key="frame" x="0.0" y="0.0" width="362.66666666666669" height="48"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fId-88-RHj">
+                                            <rect key="frame" x="33" y="16" width="311.66666666666669" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fId-88-RHj" secondAttribute="bottom" constant="5" id="cWw-Mt-vsu"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fId-88-RHj" secondAttribute="trailing" constant="10" id="j2y-df-nhn"/>
+                                        <constraint firstItem="fId-88-RHj" firstAttribute="top" secondItem="TDB-NH-fo8" secondAttribute="topMargin" constant="5" id="r3B-eb-I1Q"/>
+                                        <constraint firstItem="fId-88-RHj" firstAttribute="leading" secondItem="TDB-NH-fo8" secondAttribute="leadingMargin" constant="13" id="tps-5L-OU2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblSchoolName" destination="fId-88-RHj" id="Osk-xJ-1Eu"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="88P-sU-36I" id="1Qd-3r-boA"/>
+                            <outlet property="delegate" destination="88P-sU-36I" id="v5n-Kd-HjI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6GV-fb-Hcg">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="jN3-po-eUE"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nzf-VP-EXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="223"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
